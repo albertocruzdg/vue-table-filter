@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div id="app" class="container-fluid">
+		<div class="form-group">
+			<input type="text" v-model="filter" class="form-control">
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<td>First name</td>
+					<td>Last name</td>
+					<td>Age</td>
+					<td>Position</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="person in filteredPeople">
+					<td>{{ person.first_name }}</td>
+					<td>{{ person.last_name }}</td>
+					<td>{{ person.position }}</td>
+					<td>{{ person.email }}</td>
+					<td>{{ person.gender }}</td>
+					<td>{{ person.ip_address }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<script src="table.js"></script>
+</body>
+</html>
